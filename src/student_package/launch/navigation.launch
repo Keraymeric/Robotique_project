@@ -5,8 +5,8 @@
     <rosparam file="$(find student_package)/config/move_base_params.yaml" command="load" />
     <rosparam file="$(find student_package)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find student_package)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find student_package)/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find student_package)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find student_package)/config/local_costmap_params.yaml" command="load"  ns="local_costmap" />
+    <rosparam file="$(find student_package)/config/global_costmap_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find student_package)/config/dwa_local_planner_params.yaml" command="load" />
     <rosparam file="$(find student_package)/config/global_planner_params.yaml" command="load" />
 
