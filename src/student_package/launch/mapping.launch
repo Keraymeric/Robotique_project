@@ -1,4 +1,7 @@
 <launch>
+
+    <arg name="use_map_topic" default="true"/>
+    <arg name="scan_topic" default="/scan" />
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
       <!-- simulation remap from="scan" to="/hokuyo_laser_topic"/ -->
       <!-- real -->
@@ -36,5 +39,9 @@
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
     </node>
+
+    <node pkg="student_package" type="detect_cans.py" name="detect_cans_node"  output="screen">
+    </node>
+
     
 </launch>
