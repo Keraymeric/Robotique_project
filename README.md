@@ -2,14 +2,19 @@
 # Amaury de Scorraille
 # Aymeric Kerserho
 # Protocole
-INSTALLATION DE NOTRE REPO
+
+# INSTALLATION DE NOTRE REPO
+
 Construire un ROSJECT Kinetic sans template
 Ouvrir le Webshell #1 et copier :
+``
 rm -fr catkin_ws
 git clone https://github.com/Keraymeric/Project catkin_ws
 rm -fr simulation_ws
 git clone https://github.com/ceri-num/LARM-RDS-Simulation-WS.git simulation_ws
+``
 Ouvrir le Webshell #2 et copier:
+``
 cd catkin_ws
 catkin_make
 source devel/setup.bash
@@ -18,7 +23,9 @@ cd simulation_ws
 catkin_make
 source devel/setup.bash
 cd ..
+``
 # CHALLENGE 1:
+
 1- Dans le Webshell #1, lancer la configuration de la simulation: roslaunch larm challenge-1.launch
 
 2- Dans le Webshell #2, lancer l'architecture de contrôle: roslaunch student_package navigation.launch
@@ -45,6 +52,9 @@ Enfin, avec 2D nav goal faite déplacer le robot afin d'observer son comportemen
 4- Dans le Webshell #5, lancer rviz pour visualiser: rosrun rviz rviz
 
 Ouvrir ensuite une simulation Gazebo ainsi que l'outil graphique.
+
+Avec 2D Nav Goal déplacer le robot, vous pouvez suivre la détection des canettes sur la caméra du robot sur Rviz. Plusieurs écrans sont disponible pour vous aidez à comprendre
+le traitement de l'image de la caméra.
 
 # CHALLENGE 3:
 1- Dans le Webshell #1, lancer la configuration de la simulation: roslaunch larm challenge-3.launch
