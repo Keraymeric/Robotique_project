@@ -1,5 +1,52 @@
-# Project 
-# groupe 8 Amaury de Scorraille Aymeric Kerserho
-Projet UV_larm
+# Project
+# groupe 8 
+# Amaury de Scorraille
+# Aymeric Kerserho
+# Protocole
+INSTALLATION DE NOTRE REPO
+Construire un ROSJECT Kinetic sans template
+Ouvrir le Webshell #1 et copier :
+rm -fr catkin_ws
+git clone https://github.com/Keraymeric/Project catkin_ws
+rm -fr simulation_ws
+git clone https://github.com/ceri-num/LARM-RDS-Simulation-WS.git simulation_ws
+Ouvrir le Webshell #2 et copier:
+cd catkin_ws
+catkin_make
+source devel/setup.bash
+cd ..
+cd simulation_ws
+catkin_make
+source devel/setup.bash
+cd ..
+# CHALLENGE 1:
+1- Dans le Webshell #1, lancer la configuration de la simulation: roslaunch larm challenge-1.launch
 
-Quel magnifique commit, la France s'en souviendra!
+2- Dans le Webshell #2, lancer l'architecture de contrôle: roslaunch student_package navigation.launch
+
+3- Dans le Webshell #3, lancer la localisation globale: roslaunch student_package amcl.launch
+
+4- Dans le Webshell #4, lancer rviz pour visualiser: rosrun rviz rviz
+
+Ouvrir ensuite une simulation Gazebo ainsi que l'outil graphique.
+
+Configuration RVIZ: Ajouter: RobotModel Map --> move_base/global_costmap/costmap LaserScan --> topic: /scan PoseArray --> topic: /particlecloud TF
+
+En comparant avec Gazebo, estimer la position du robot à l'aide de 2D Pose Estimate (les données du laser et de la carte doivent se superposer)
+
+Enfin, avec 2D nav goal faite déplacer le robot afin d'observer son comportement.
+
+# CHALLENGE 2:
+1- Dans le Webshell #1, lancer la configuration de la simulation: roslaunch larm challenge-2.launch
+
+2- Dans le Webshell #2, lancer l'architecture de contrôle: roslaunch student_package mapping.launch
+
+3- Dans le Webshell #3, lancer l'architecture de contrôle: roslaunch student_package navigation.launch
+
+4- Dans le Webshell #4, lancer la localisation globale: roslaunch student_package amcl.launch
+
+5- Dans le Webshell #5, lancer rviz pour visualiser: rosrun rviz rviz
+
+Ouvrir ensuite une simulation Gazebo ainsi que l'outil graphique.
+
+# Configuration du RVIZ: (même configuration qu'au challenge 1)
