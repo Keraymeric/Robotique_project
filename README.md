@@ -42,10 +42,26 @@ Enfin, avec 2D nav goal faite déplacer le robot afin d'observer son comportemen
 
 3- Dans le Webshell #3, lancer l'architecture de contrôle: roslaunch student_package navigation.launch
 
-4- Dans le Webshell #4, lancer la localisation globale: roslaunch student_package amcl.launch
+4- Dans le Webshell #5, lancer rviz pour visualiser: rosrun rviz rviz
+
+Ouvrir ensuite une simulation Gazebo ainsi que l'outil graphique.
+
+# CHALLENGE 3:
+1- Dans le Webshell #1, lancer la configuration de la simulation: roslaunch larm challenge-3.launch
+
+2- Dans le Webshell #2, lancer l'architecture de contrôle: roslaunch student_package mapping.launch
+
+3- Dans le Webshell #3, lancer l'architecture de contrôle: roslaunch student_package navigation.launch
+
+4- Dans le Webshell #3, lancer l'architecture de contrôle: roslaunch student_package exploration.launch
 
 5- Dans le Webshell #5, lancer rviz pour visualiser: rosrun rviz rviz
 
 Ouvrir ensuite une simulation Gazebo ainsi que l'outil graphique.
 
-# Configuration du RVIZ: (même configuration qu'au challenge 1)
+Utiliser publish point dans rviz pour poser les sommets du polygone délimitant la zone à explorer.
+Pour fermer le polygone, placer le dernier point sur la position du premier: le polygone deviendra alors rouge, ce qui signifie que la zone est sélectionnnée.
+Pour lancer l'exploration, placer encore un point n'importe où à l'intérieur du polygone... Le robot devrait alors s'y déplacer et commencer le balayage...
+
+# Configuration du RVIZ:
+Le fichier se situant dans le dossier rviz vous donne la configuration pour les 3 challenges
