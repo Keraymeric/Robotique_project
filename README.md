@@ -1,5 +1,4 @@
-# Project
-# groupe 8 
+# Groupe 8 
 # Amaury de Scorraille
 # Aymeric Kerserho
 # Protocole
